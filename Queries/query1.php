@@ -1,10 +1,10 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT first_name, last_name, date_of_birth, email_address, telephone_number, city 
-                                FROM comp353.Person,comp353.Person_zone_junction 
+                                FROM rec353_4.Person,rec353_4.Person_zone_junction 
                                 WHERE Person.Person_ID = Person_zone_junction.Person_ID 
                                 AND Person_zone_junction.Zone_ID = (SELECT Zone_ID 
-									                                From comp353.GroupZone 
+									                                From rec353_4.GroupZone 
 									                                WHERE Group_name = 'MontrealPrimaryGrade1_Group_1');");
 $statement->bindParam(":Person_ID", $_GET["Person_ID"]);
 $statement->bindParam(":Zone_ID", $_GET["Zone_ID"]);
