@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM comp353.HealthFacility AS facility WHERE facility.Facility_ID = :Facility_ID");
+$statement = $conn->prepare("SELECT * FROM comp3rec353_453.HealthFacility AS facility WHERE facility.Facility_ID = :Facility_ID");
 $statement->bindParam(":Facility_ID", $_GET["Facility_ID"]);
 $statement->execute();
 $facility = $statement->fetch(PDO::FETCH_ASSOC);
@@ -15,7 +15,7 @@ if (
     && isset($_POST["facility_drivethru"])
     && isset($_POST["facility_appointment_type"])
 ) {
-    $statement = $conn->prepare("UPDATE comp353.HealthFacility 
+    $statement = $conn->prepare("UPDATE rec353_4.HealthFacility 
                                 SET facility_Name = :facility_Name,
                                     facility_Address = :facility_Address,
                                     facility_Phone = :facility_Phone,

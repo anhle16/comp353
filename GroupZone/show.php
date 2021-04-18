@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM comp353.GroupZone AS GroupZone WHERE GroupZone.Zone_ID = :Zone_ID");
+$statement = $conn->prepare("SELECT * FROM rec353_4.GroupZone AS GroupZone WHERE GroupZone.Zone_ID = :Zone_ID");
 $statement->bindParam(":Zone_ID", $_GET["Zone_ID"]);
 $statement->execute();
 $zone = $statement->fetch(PDO::FETCH_ASSOC);

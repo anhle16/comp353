@@ -10,7 +10,7 @@ if (
     && isset($_POST["facility_drivethru"])
     && isset($_POST["facility_appointment_type"]))
 {
-    $facility = $conn->prepare("INSERT INTO comp353.HealthFacility (Facility_ID, 
+    $facility = $conn->prepare("INSERT INTO rec353_4.HealthFacility (Facility_ID, 
                                                                     facility_Name, 
                                                                     facility_Address, 
                                                                     facility_Phone, 

@@ -1,7 +1,7 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT *
-                            FROM comp353.PublicHealthWorker 
+                            FROM rec353_4.PublicHealthWorker 
                             AS PublicHealthWorker 
                             WHERE PublicHealthWorker.Person_ID = :Person_ID 
                             and PublicHealthWorker.Serving_facility = :Serving_facility
@@ -21,7 +21,7 @@ if (
     && isset($_POST["Serving_facility"])
     && isset($_POST["Joining_Date"])
 ){
-    $statement = $conn->prepare("UPDATE comp353.PublicHealthWorker 
+    $statement = $conn->prepare("UPDATE rec353_4.PublicHealthWorker 
                                 SET Position = :Position,
                                     Leaving_Date = :Leaving_Date,
                                     working_schedule = :working_schedule

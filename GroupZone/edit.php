@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM comp353.GroupZone 
+$statement = $conn->prepare("SELECT * FROM rec353_4.GroupZone 
                             AS GroupZone 
                             WHERE GroupZone.Zone_ID = :Zone_ID
                             ");
@@ -12,7 +12,7 @@ if (
     isset($_POST["Group_name"]) 
     && isset($_POST["Zone_ID"])
 ){
-    $statement = $conn->prepare("UPDATE comp353.GroupZone 
+    $statement = $conn->prepare("UPDATE rec353_4.GroupZone 
                                 SET Group_name = :Group_name
                                 WHERE Zone_ID = :Zone_ID;");
 

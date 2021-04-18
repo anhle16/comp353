@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT Zone_ID FROM comp353.GroupZone 
+$statement = $conn->prepare("SELECT Zone_ID FROM rec353_4.GroupZone 
                              ");
 $statement->bindParam(":Zone_ID", $_GET["Zone_ID"]);
 $statement->execute();
@@ -10,7 +10,7 @@ if (
     isset($_POST["Zone_ID"]) 
     && isset($_POST["Group_name"]))
 {
-    $zone = $conn->prepare("INSERT INTO comp353.GroupZone (Zone_ID, Group_name)
+    $zone = $conn->prepare("INSERT INTO rec353_4.GroupZone (Zone_ID, Group_name)
                                     VALUES (:Zone_ID, :Group_name);");
 
     $zone->bindParam(':Zone_ID', $_POST["Zone_ID"]);

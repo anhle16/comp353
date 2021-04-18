@@ -1,14 +1,14 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare('SELECT * 
-                            FROM comp353.regions 
+                            FROM rec353_4.regions 
                             AS regions
                             ORDER BY id ASC
                             ');
 $statement->execute();
 
 $statement2 = $conn->prepare('SELECT * 
-                                FROM comp353.cities, comp353.regions
+                                FROM rec353_4.cities, comp353.regions
                                 WHERE region_id = :region_id ;
                             ');
 $statement2->bindParam(":region_id", $_GET["region_id"]);

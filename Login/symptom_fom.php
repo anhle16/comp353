@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-    $healthcare_form = $conn->prepare("INSERT INTO comp353.healthcare_form (fill_up_date, fill_up_time, fever, 
+    $healthcare_form = $conn->prepare("INSERT INTO rec353_4.healthcare_form (fill_up_date, fill_up_time, fever, 
                                                             short_of_breath, loss_of_taste_smell, nausea, stomach_aches, vomiting,
                                                             headache, muscle_pain, diarrhea, sore_throat,other_symptoms)
                                     VALUES (:fill_up_date, :fill_up_time, :fever, 

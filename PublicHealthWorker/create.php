@@ -8,7 +8,7 @@ if (
     && isset($_POST["Leaving_Date"])
     && isset($_POST["working_schedule"]))
 {
-    $worker = $conn->prepare("INSERT INTO comp353.PublicHealthWorker (Person_ID, Serving_facility, Position, 
+    $worker = $conn->prepare("INSERT INTO rec353_4.PublicHealthWorker (Person_ID, Serving_facility, Position, 
                                                             Joining_Date, Leaving_Date, working_schedule)
                                     VALUES (:Person_ID, :Serving_facility, :Position, 
                                                             :Joining_Date, :Leaving_Date, :working_schedule);");

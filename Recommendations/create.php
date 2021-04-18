@@ -8,7 +8,7 @@ if (
     && isset($_POST["change_date"])
 ) 
 {
-    $policy = $conn->prepare("INSERT INTO comp353.public_health_recommendations (policy_id, policy_subid, policy_description, publish_date, change_date) 
+    $policy = $conn->prepare("INSERT INTO rec353_4.public_health_recommendations (policy_id, policy_subid, policy_description, publish_date, change_date) 
                             VALUES (:policy_id, :policy_subid, :policy_description, :publish_date, :change_date);
                             ");
 

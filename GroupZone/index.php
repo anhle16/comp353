@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare('SELECT * FROM comp353.GroupZone AS GroupZone');
+$statement = $conn->prepare('SELECT * FROM rec353_4.GroupZone AS GroupZone');
 $statement->execute();
 ?>
 

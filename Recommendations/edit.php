@@ -1,7 +1,7 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT * 
-                            FROM comp353.public_health_recommendations 
+                            FROM rec353_4.public_health_recommendations 
                             AS public_health_recommendations 
                             WHERE public_health_recommendations.policy_id = :policy_id
                             AND public_health_recommendations.policy_subid = :policy_subid
@@ -18,7 +18,7 @@ if (
     && isset($_POST["publish_date"])
     && isset($_POST["change_date"])
 ) {
-    $statement = $conn->prepare("UPDATE comp353.public_health_recommendations 
+    $statement = $conn->prepare("UPDATE rec353_4.public_health_recommendations 
                                 SET policy_description = :policy_description,
                                     publish_date = :publish_date,
                                     change_date = :change_date

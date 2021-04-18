@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("DELETE FROM comp353.PublicHealthWorker 
+$statement = $conn->prepare("DELETE FROM rec353_4.PublicHealthWorker 
                                 WHERE   PublicHealthWorker.Person_ID = :Person_ID
                                         and PublicHealthWorker.Serving_facility = :Serving_facility 
                                         and PublicHealthWorker.Joining_Date = :Joining_Date

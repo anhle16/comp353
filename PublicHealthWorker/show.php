@@ -1,7 +1,7 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT * 
-                            FROM comp353.PublicHealthWorker 
+                            FROM rec353_4.PublicHealthWorker 
                             AS PublicHealthWorker 
                             WHERE PublicHealthWorker.Person_ID = :Person_ID 
                             and PublicHealthWorker.Serving_facility = :Serving_facility

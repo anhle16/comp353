@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT city_id FROM comp353.cities 
+$statement = $conn->prepare("SELECT city_id FROM rec353_4.cities 
                              ");
 $statement->bindParam(":city_id", $_GET["city_id"]);
 $statement->execute();
@@ -20,7 +20,7 @@ if (
     && isset($_POST["citizenship"])
     && isset($_POST["email_address"]))
 {
-    $person = $conn->prepare("INSERT INTO comp353.Person (Person_ID, first_name, last_name, 
+    $person = $conn->prepare("INSERT INTO rec353_4.Person (Person_ID, first_name, last_name, 
                                                             date_of_birth, medicare_number, telephone_number, physical_address, city,
                                                             province, postal_code, citizenship, email_address)
                                     VALUES (:Person_ID, :first_name, :last_name, 

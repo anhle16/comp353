@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM comp353.HealthFacility AS facility WHERE facility.Facility_ID = :Facility_ID");
+$statement = $conn->prepare("SELECT * FROM rec353_4.HealthFacility AS facility WHERE facility.Facility_ID = :Facility_ID");
 $statement->bindParam(":Facility_ID", $_GET["Facility_ID"]);
 $statement->execute();
 $facility = $statement->fetch(PDO::FETCH_ASSOC);

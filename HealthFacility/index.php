@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare('SELECT * FROM comp353.HealthFacility AS HealthFacility');
+$statement = $conn->prepare('SELECT * FROM rec353_4.HealthFacility AS HealthFacility');
 $statement->execute();
 ?>
 
