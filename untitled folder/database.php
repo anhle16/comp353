@@ -1,9 +1,9 @@
 <?php
-$server = 'rec353.encs.concordia.ca';
-$username = 'rec353_4';
-$password = 'aA12345';
-// $database = 'comp353';
-$database = 'rec353_4';
+$server = 'localhost:3306';
+$username = 'root';
+$password = '';
+$database = 'comp353';
+// $database = 'test';
 
 try {
   $conn = new PDO("mysql:host=$server;dbname=$database;", $username, $password);
