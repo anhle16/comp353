@@ -10,7 +10,7 @@ try {
   $con2 = mysqli_connect($server,$username,$password,$database);
   //print('Connected');
 } catch (PDOException $e) {
-  //print('Not Connected');
+  //print('Not Connnnnnnfected');
   die('Connection Failed: ' . $e->getMessage());
 }
 

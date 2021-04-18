@@ -19,7 +19,7 @@
     $healthcare_form->bindParam(':muscle_pain', $_POST["muscle_pain"]);
     $healthcare_form->bindParam(':diarrhea', $_POST["diarrhea"]);
     $healthcare_form->bindParam(':sore_throat', $_POST["sore_throat"]);
-	$healthcare_form->bindParam(':other_symptoms', $_POST["other_symptoms"]);
+	  $healthcare_form->bindParam(':other_symptoms', $_POST["other_symptoms"]);
 ?>
 
 <!DOCTYPE html>
@@ -41,7 +41,7 @@
   <input type="checkbox" id="short_of_breath" name="short_of_breath" value="">
   <label for="lname">Shortness of breath or difficulty breathing:</label><br>
   
-    <input type="checkbox" id="loss_of_taste_smell" name="loss_of_taste_smell" value="">
+  <input type="checkbox" id="loss_of_taste_smell" name="loss_of_taste_smell" value="">
   <label for="lname">Loss of taste and smell:</label><br>
   
     <input type="checkbox" id="nausea" name="nausea" value="">
