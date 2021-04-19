@@ -43,7 +43,7 @@ $healthcare_form = $conn->prepare("INSERT INTO comp353.healthcare_form (person_i
     {
         header("Location: .");
     } else {
-        echo"Error: Person ID is already present or not all fields are filled, please try again!";
+        echo"Error!";
     }
 }
 ?>
@@ -54,7 +54,7 @@ $healthcare_form = $conn->prepare("INSERT INTO comp353.healthcare_form (person_i
 
 
 
-<h1><?php echo $_SESSION['person_ID'];echo" ";echo $_SESSION['last_name'];echo" symptoms form"?></h1>
+<h1><?php echo $_SESSION['first_name'];echo" ";echo $_SESSION['last_name'];echo" symptoms form"?></h1>
 <a href="logout.php">Logout</a>
 
    <form action="./symptom.php" method="post">
