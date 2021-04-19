@@ -16,9 +16,9 @@
     <a href="./HealthFacility/">Health Facilities</a><br>
     <a href="./Regions/">Regions</a><br>
     <a href="./GroupZone/">Group Zone</a><br>
-    <a href="./Recommendations/index.php">Public health Information and Recommendations:</a><br>
+    <a href="./Recommendations/index.php">Public health Information and Recommendations</a><br>
     <a href="./Measures/">Instructions</a><br>
-    <a> TRIGGER </a> <br>
+    <!-- <a> TRIGGER </a> <br> -->
     <a href="./Login/">Login Page Form </a><br>
     <a href="./Queries/">Queries</a><br>
 </body>

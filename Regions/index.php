@@ -25,7 +25,7 @@ $s2result = $statement2->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT);
     <title>Regions</title>
 </head>
 <body>
-    <h1>List of Regions and Their cities</h1>
+    <h1>List of Regions</h1>
         <a href="./create.php">Add a Region</a>
         <table>
             <thead>
