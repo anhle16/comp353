@@ -23,7 +23,7 @@ if (
 ){
     $statement = $conn->prepare("UPDATE rec353_4.publichealthworker 
                                 SET Position = :Position,
-                                    Leaving_Date = :Leaving_Date,
+                                    Leaving_Date = :Leaving_Date
                                     -- working_schedule = :working_schedule
                                 WHERE Person_ID = :Person_ID
                                 AND Serving_facility = :Serving_facility
