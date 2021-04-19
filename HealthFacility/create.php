@@ -92,7 +92,7 @@ if (
             <option value = "Walkin"> Walkin </option>
             <option value = "Appointment Only"> Appointment Only <br></option>
             <option value = "Both"> Both <br></option>
-            </select>
+            </select><br>
 
         <!-- <input type="text" name="facility_appointment_type" id="facility_appointment_type"> <br> -->
         
