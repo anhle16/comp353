@@ -19,7 +19,7 @@
 
      	<button type="submit">Login</button>
 
-		 <br><a href="./">Back to Person list</a>
+		 <br><a href="../">Back to Main Menu</a>
      </form>
 </body>
 </html>
