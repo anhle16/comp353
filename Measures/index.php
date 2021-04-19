@@ -8,6 +8,7 @@
 </head>
 <body>
     <a href="./Policy_text.php">View Policy in Text</a><br>
+    <br><a href="./">Back to Person list</a>
 </body>
-    <a href="./">Back to Main Menu</a>
+    <!-- <a href="./">Back to Main Menu</a> -->
 </html>

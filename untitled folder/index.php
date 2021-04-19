@@ -12,6 +12,7 @@
     <h1>Welcome!</h1>
     <p>Choose one of the following options:</p>
     <a href="./Login/">Login Page</a><br>
+    <a href="./Log_in/">Account</a><br>
     <a href="./Recommendations/index.php">Public health Information and Recommendations:</a><br>
     <a href="./Person/">Persons</a><br>
     <a href="./HealthFacility/">Health Facilities</a><br>

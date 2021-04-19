@@ -84,7 +84,7 @@ if (
             <!-- <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option> -->
             <option value = "Y"> Yes </option>
             <option value = "N"> No <br></option>
-            </select>
+            </select> <br>
 
         <label for="facility_appointment_type"> Appointment Type : Walkin, Appointment or Both </label><br>
         <select name = "facility_appointment_type" id="facility_appointment_type">

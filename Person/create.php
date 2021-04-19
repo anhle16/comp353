@@ -89,7 +89,7 @@ if (
         <label for="physical_address">Address</label><br>
         <input type="text" name="physical_address" id="physical_address"> <br>
 
-        <label for="city">City</label><br>
+        <!-- <label for="city">City</label><br> -->
         <!-- <input type="text" name="city" id="city"> <br><br> -->
         <!-- <select name = 'TEST' > -->
         <!-- <br><br><br><br> -->
