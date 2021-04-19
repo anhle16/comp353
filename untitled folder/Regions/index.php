@@ -9,11 +9,11 @@ $statement->execute();
 
 $statement2 = $conn->prepare('SELECT * 
                                 FROM comp353.cities, comp353.regions
-                                WHERE region_id = :region_id ;
+                                WHERE region_id = :region_id 
                             ');
 $statement2->bindParam(":region_id", $_GET["region_id"]);
 $statement2->execute();
-// $s2result = $statement2->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT);
+$s2result = $statement2->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT);
 ?>
 
 <!DOCTYPE html>
@@ -33,26 +33,26 @@ $statement2->execute();
                     <td>Region Id</td>
                     <td>Region Name</td>
                     <td>Current Alert Level</td>
-                    <td>Cities included: </td>
+                    <!-- <td>Cities included: </td> -->
                     <td>Actions</td>
                 </tr>
             </thead>
             <tbody>
                 <?php while ($row = $statement->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT) ) 
                 { 
-                    $row2 = $statement2->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)
+                    // $row2 = $statement2->fetch(PDO::FETCH_ASSOC, PDO::FETCH_ORI_NEXT)
                     ?>
                     <tr>
                         <td><?= $row["id"] ?></td>
                         <td><?= $row["region_name"] ?></td>
                         <td><?= $row["alert_level"] ?></td>
-                        <td><?= $row2["city_name"] ?></td>
+                        <!-- <td><?= $row2["city_name"] ?></td> -->
                         <!-- <td>1</td> -->
                         
                         <td>
-                            <a href="./show.php?id=<?= $row["id"] ?>&&policy_subid=<?= $row["policy_subid"]?>">Show</a>
-                            <a href="./edit.php?id=<?= $row["id"] ?>&&policy_subid=<?= $row["policy_subid"]?>">Edit</a>
-                            <a href="./delete.php?id=<?= $row["id"] ?>&&policy_subid=<?= $row["policy_subid"]?>">Delete</a>
+                            <a href="./show.php?id=<?= $row["id"] ?>">Show</a>
+                            <a href="./edit.php?id=<?= $row["id"] ?>">Edit</a>
+                            <a href="./delete.php?id=<?= $row["id"] ?>">Delete</a>
                         </td>
                     </tr>
                 <?php 
