@@ -78,10 +78,23 @@ if (
         <input type="text" name="facility_Type" id="facility_Type"> <br>
 
         <label for="facility_drivethru"> Have Drive (Yes/No) </label><br>
-        <input type="text" name="facility_drivethru" id="facility_drivethru"> <br>
-   
+        <!-- <input type="text" name="facility_drivethru" id="facility_drivethru"> <br> -->
+
+        <select name = "facility_drivethru" id="facility_drivethru">
+            <!-- <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option> -->
+            <option value = "Y"> Yes </option>
+            <option value = "N"> No <br></option>
+            </select>
+
         <label for="facility_appointment_type"> Appointment Type : Walkin, Appointment or Both </label><br>
-        <input type="text" name="facility_appointment_type" id="facility_appointment_type"> <br>
+        <select name = "facility_appointment_type" id="facility_appointment_type">
+            <!-- <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option> -->
+            <option value = "Walkin"> Walkin </option>
+            <option value = "Appointment Only"> Appointment Only <br></option>
+            <option value = "Both"> Both <br></option>
+            </select>
+
+        <!-- <input type="text" name="facility_appointment_type" id="facility_appointment_type"> <br> -->
         
         <button type="submit">Add</button>
     </form>

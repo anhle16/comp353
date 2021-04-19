@@ -20,7 +20,7 @@ if (
     && isset($_POST["citizenship"])
     && isset($_POST["email_address"]))
 {
-    $person = $conn->prepare("INSERT INTO rec353_4.Person (Person_ID, first_name, last_name, 
+    $person = $conn->prepare("INSERT INTO rec353_4.person (person_ID, first_name, last_name, 
                                                             date_of_birth, medicare_number, telephone_number, physical_address, city,
                                                             province, postal_code, citizenship, email_address)
                                     VALUES (:Person_ID, :first_name, :last_name, 
@@ -92,16 +92,23 @@ if (
         <label for="city">City</label><br>
         <!-- <input type="text" name="city" id="city"> <br><br> -->
         <!-- <select name = 'TEST' > -->
-        <br><br><br><br>
-        <label for="city">Choose a city: <?= $city["city_id"] ?> </label>
+        <!-- <br><br><br><br> -->
+        <label for="city">Choose a city:  </label>
         <select name = "city" id="city_id">
-            <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option>
+            <!-- <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option> -->
             <option value = "1"> 1</option>
             <option value = "2"> 2 <br></option>
             <option value = "3"> 3 <br></option>
+            <option value = "4"> 4 <br></option>
+            <option value = "5"> 5 <br></option>
+            <option value = "6"> 6 <br></option>
+            <option value = "7"> 7 <br></option>
+            <option value = "8"> 8 <br></option>
+            <option value = "9"> 9 <br></option>
+            <option value = "10"> 10 <br></option>
             </select>
             <!-- <input type="submit" value="Submit"> -->
-            <br><br><br><br>
+            <!-- <br><br><br><br> -->
         <label for="province">Province</label><br>
         <input type="text" name="province" id="province"> <br>
         <label for="postal_code">Postal Code</label><br>

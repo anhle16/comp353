@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM rec353_4.Person AS Person WHERE Person.Person_ID = :Person_ID");
+$statement = $conn->prepare("SELECT * FROM rec353_4.person AS person WHERE person.Person_ID = :Person_ID");
 $statement->bindParam(":Person_ID", $_GET["Person_ID"]);
 $statement->execute();
 $person = $statement->fetch(PDO::FETCH_ASSOC);

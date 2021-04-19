@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare("SELECT * FROM rec353_4.Person 
+$statement = $conn->prepare("SELECT * FROM rec353_4.person 
                             AS person 
                             WHERE person.Person_ID = :Person_ID
                             ");
@@ -22,7 +22,7 @@ if (
     && isset($_POST["email_address"])
     && isset($_POST["Person_ID"])
 ){
-    $statement = $conn->prepare("UPDATE rec353_4.Person 
+    $statement = $conn->prepare("UPDATE rec353_4.person 
                                 SET first_name = :first_name,
                                     last_name = :last_name,
                                     date_of_birth = :date_of_birth,
