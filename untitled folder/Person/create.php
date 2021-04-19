@@ -68,11 +68,11 @@ if (
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Person</title>
+    <title>Add a Person</title>
 </head>
 
 <body>
-    <h1>Add Person</h1>
+    <h1>Add a Person</h1>
     <form action="./create.php" method="post">
         <label for="Person_ID">Person ID</label><br>
         <input type="text" name="Person_ID" id="Person_ID"> <br>
@@ -89,19 +89,26 @@ if (
         <label for="physical_address">Address</label><br>
         <input type="text" name="physical_address" id="physical_address"> <br>
 
-        <label for="city">City</label><br>
+        <!-- <label for="city">City</label><br> -->
         <!-- <input type="text" name="city" id="city"> <br><br> -->
         <!-- <select name = 'TEST' > -->
-        <br><br><br><br>
-        <label for="city">Choose a city: <?= $city["city_id"] ?> </label>
+        <!-- <br><br><br><br> -->
+        <label for="city">Choose a city:  </label><br>
         <select name = "city" id="city_id">
-            <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option>
+            <!-- <option value = <?= $city["city_id"] ?>> <?= $city["city_id"] ?> <br> </option> -->
             <option value = "1"> 1</option>
             <option value = "2"> 2 <br></option>
             <option value = "3"> 3 <br></option>
-            </select>
+            <option value = "4"> 4 <br></option>
+            <option value = "5"> 5 <br></option>
+            <option value = "6"> 6 <br></option>
+            <option value = "7"> 7 <br></option>
+            <option value = "8"> 8 <br></option>
+            <option value = "9"> 9 <br></option>
+            <option value = "10"> 10 <br></option>
+            </select><br>
             <!-- <input type="submit" value="Submit"> -->
-            <br><br><br><br>
+            <!-- <br><br><br><br> -->
         <label for="province">Province</label><br>
         <input type="text" name="province" id="province"> <br>
         <label for="postal_code">Postal Code</label><br>

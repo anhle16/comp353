@@ -18,6 +18,8 @@
      	<input type="password" name="password" placeholder="Password"><br>
 
      	<button type="submit">Login</button>
+
+		 <br><a href="./">Back to Person list</a>
      </form>
 </body>
 </html>
