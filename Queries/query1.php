@@ -1,7 +1,7 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT first_name, last_name, date_of_birth, email_address, telephone_number, city 
-                                FROM rec353_4.Person,rec353_4.Person_zone_junction 
+                                FROM rec353_4.person,rec353_4.Person_zone_junction 
                                 WHERE person.Person_ID = Person_zone_junction.Person_ID 
                                 AND Person_zone_junction.Zone_ID = (SELECT Zone_ID 
 									                                From rec353_4.GroupZone 
