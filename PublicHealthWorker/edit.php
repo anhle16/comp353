@@ -1,11 +1,11 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT *
-                            FROM rec353_4.PublicHealthWorker 
-                            AS PublicHealthWorker 
-                            WHERE PublicHealthWorker.Person_ID = :Person_ID 
-                            and PublicHealthWorker.Serving_facility = :Serving_facility
-                            and PublicHealthWorker.Joining_Date = :Joining_Date
+                            FROM rec353_4.publichealthworker 
+                            AS publichealthworker 
+                            WHERE publichealthworker.Person_ID = :Person_ID 
+                            and publichealthworker.Serving_facility = :Serving_facility
+                            and publichealthworker.Joining_Date = :Joining_Date
                             ");
 $statement->bindParam(":Person_ID", $_GET["Person_ID"]);
 $statement->bindParam(":Serving_facility", $_GET["Serving_facility"]);
@@ -16,15 +16,15 @@ $worker = $statement->fetch(PDO::FETCH_ASSOC);
 if ( 
     isset($_POST["Position"])
     && isset($_POST["Leaving_Date"])
-    && isset($_POST["working_schedule"])
+    // && isset($_POST["working_schedule"])
     && isset($_POST["Person_ID"])
     && isset($_POST["Serving_facility"])
     && isset($_POST["Joining_Date"])
 ){
-    $statement = $conn->prepare("UPDATE rec353_4.PublicHealthWorker 
+    $statement = $conn->prepare("UPDATE rec353_4.publichealthworker 
                                 SET Position = :Position,
                                     Leaving_Date = :Leaving_Date,
-                                    working_schedule = :working_schedule
+                                    -- working_schedule = :working_schedule
                                 WHERE Person_ID = :Person_ID
                                 AND Serving_facility = :Serving_facility
                                 AND Joining_Date = :Joining_Date
@@ -32,7 +32,7 @@ if (
 
     $statement->bindParam(':Position', $_POST["Position"]);
     $statement->bindParam(':Leaving_Date', $_POST["Leaving_Date"]);
-    $statement->bindParam(':working_schedule', $_POST["working_schedule"]);
+    // $statement->bindParam(':working_schedule', $_POST["working_schedule"]);
     $statement->bindParam(':Person_ID', $_POST["Person_ID"]);
     $statement->bindParam(':Serving_facility', $_POST["Serving_facility"]);
     $statement->bindParam(':Joining_Date', $_POST["Joining_Date"]);
@@ -82,8 +82,8 @@ if (
         <label for="Leaving_Date">Leaving Date</label><br>
         <input type="date" name="Leaving_Date" id="Leaving_Date" value="<?= $worker["Leaving_Date"] ?>"> <br><br>
         
-        <label for="working_schedule">Working Schedule</label><br>
-        <input type="text" name="working_schedule" id="working_schedule" value="<?= $worker["working_schedule"] ?>"> <br><br>
+        <!-- <label for="working_schedule">Working Schedule</label><br>
+        <input type="text" name="working_schedule" id="working_schedule" value="<?= $worker["working_schedule"] ?>"> <br><br> -->
 
         <button type="submit">Update</button>
     </form>

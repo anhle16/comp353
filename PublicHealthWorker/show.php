@@ -1,11 +1,11 @@
 <?php require_once '../database.php';
 
 $statement = $conn->prepare("SELECT * 
-                            FROM rec353_4.PublicHealthWorker 
-                            AS PublicHealthWorker 
-                            WHERE PublicHealthWorker.Person_ID = :Person_ID 
-                            and PublicHealthWorker.Serving_facility = :Serving_facility
-                            and PublicHealthWorker.Joining_Date = :Joining_Date
+                            FROM rec353_4.publichealthworker 
+                            AS publichealthworker 
+                            WHERE publichealthworker.Person_ID = :Person_ID 
+                            and publichealthworker.Serving_facility = :Serving_facility
+                            and publichealthworker.Joining_Date = :Joining_Date
                             ");
 $statement->bindParam(":Person_ID", $_GET["Person_ID"]);
 $statement->bindParam(":Serving_facility", $_GET["Serving_facility"]);
@@ -27,7 +27,7 @@ $worker = $statement->fetch(PDO::FETCH_ASSOC);
     <p>Position: <?= $worker["Position"] ?></p>
     <p>Join Date: <?= $worker["Joining_Date"] ?></p>
     <p>Leave Date: <?= $worker["Leaving_Date"] ?></p>
-    <p>Work Schedule: <?= $worker["working_schedule"] ?></p>
+    <!-- <p>Work Schedule: <?= $worker["working_schedule"] ?></p> -->
     <a href="./">Back to Worker List</a>
 </body>
 </html>

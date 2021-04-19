@@ -6,12 +6,13 @@ if (
     && isset($_POST["Position"])
     && isset($_POST["Joining_Date"])
     && isset($_POST["Leaving_Date"])
-    && isset($_POST["working_schedule"]))
+    // && isset($_POST["working_schedule"])
+    )
 {
-    $worker = $conn->prepare("INSERT INTO rec353_4.PublicHealthWorker (Person_ID, Serving_facility, Position, 
-                                                            Joining_Date, Leaving_Date, working_schedule)
+    $worker = $conn->prepare("INSERT INTO rec353_4.publichealthworker (Person_ID, Serving_facility, Position, 
+                                                            Joining_Date, Leaving_Date)
                                     VALUES (:Person_ID, :Serving_facility, :Position, 
-                                                            :Joining_Date, :Leaving_Date, :working_schedule);");
+                                                            :Joining_Date, :Leaving_Date);");
 
 
     $worker->bindParam(':Person_ID', $_POST["Person_ID"]);
@@ -19,7 +20,7 @@ if (
     $worker->bindParam(':Position', $_POST["Position"]);
     $worker->bindParam(':Joining_Date', $_POST["Joining_Date"]);
     $worker->bindParam(':Leaving_Date', $_POST["Leaving_Date"]);
-    $worker->bindParam(':working_schedule', $_POST["working_schedule"]);
+    // $worker->bindParam(':working_schedule', $_POST["working_schedule"]);
 
     if ($worker->execute()){
         header("Location: .");
@@ -58,8 +59,8 @@ if (
         <label for="Leaving_Date">Leave Date</label><br>
         <input type="date" name="Leaving_Date" id="Leaving_Date"> <br>
 
-        <label for="working_schedule">Working Shedule</label><br>
-        <input type="text" name="working_schedule" id="working_schedule"> <br>
+        <!-- <label for="working_schedule">Working Shedule</label><br>
+        <input type="text" name="working_schedule" id="working_schedule"> <br> -->
 
         <button type="submit">Add</button>
     </form>

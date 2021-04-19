@@ -1,6 +1,6 @@
 <?php require_once '../database.php';
 
-$statement = $conn->prepare('SELECT * FROM rec353_4.PublicHealthWorker AS Worker');
+$statement = $conn->prepare('SELECT * FROM rec353_4.publichealthworker AS Worker');
 $statement->execute();
 ?>
 
@@ -25,7 +25,7 @@ $statement->execute();
                 <td>Positionn</td>
                 <td>Join Date</td>
                 <td>Leave Date</td>
-                <td>Work Schedule</td>
+                <!-- <td>Work Schedule</td> -->
             </tr>
         </thead>
         <tbody>
@@ -36,7 +36,7 @@ $statement->execute();
                     <td><?= $row["Position"] ?></td>
                     <td><?= $row["Joining_Date"] ?></td>
                     <td><?= $row["Leaving_Date"] ?></td>
-                    <td><?= $row["working_schedule"] ?></td>
+                    <!-- <td><?= $row["working_schedule"] ?></td> -->
                     <td>
                         <a href="./show.php?Person_ID=<?= $row["Person_ID"] ?>&&Serving_facility=<?= $row["Serving_facility"]?>&&Joining_Date=<?= $row["Joining_Date"]?>">Show</a>
                         <a href="./edit.php?Person_ID=<?= $row["Person_ID"] ?>&&Serving_facility=<?= $row["Serving_facility"]?>&&Joining_Date=<?= $row["Joining_Date"]?>">Edit</a>
